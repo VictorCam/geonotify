@@ -7,7 +7,7 @@ let currIconTheme = computed(() => isDark.value ? 'moon' : 'sun');
 </script>
 
 <template>
-  <header class="shadow-xl shadow-black/30 bg-black/20 relative z99">
+  <header class="shadow-xl shadow-black/20 bg-black/15 relative z99">
     <div class="sm:mx3 flex items-center gap2 p3 h8 ">
       <h1><span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-green-500">Geo</span>notify</h1>
       <div class="svg earth p2 mr-auto spin"></div>

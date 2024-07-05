@@ -43,6 +43,7 @@ const resetValues = () => {
   if (useGPS.value == true) {
     data1.value = null
     err1.value = null
+    address1.value = ''
     resume()
   }
   else {
@@ -81,7 +82,6 @@ watch([data2, throttledCoords], handleCoordsChange)
 let debounceSearch1 = useDebounceFn(searchLocation1, DEBOUNCE_TIME)
 let debounceSearch2 = useDebounceFn(searchLocation2, DEBOUNCE_TIME)
 
-
 const shareTime = () => {
   share({
     text: 'I will approximately arrive in ' + roundedTime.value + ' minutes',
@@ -92,7 +92,7 @@ const shareTime = () => {
 <template>
   <div>
     <NavHeader></NavHeader>
-    <div class="center <sm:w80vw bg-black/15 shadow-xl items-start flex flex-col shadow-black/30 p5 rd-3">
+    <div class="center <sm:w80vw bg-black/10 shadow-xl items-start flex flex-col shadow-black/30 p5 rd-3">
 
       <!-- serach Location -->
       <div class="pos-input">
@@ -126,7 +126,7 @@ const shareTime = () => {
       <!-- result -->
       <TransitionGroup class="wfit mb3 font-bold" name="list" tag="p">
         <p class="flex gap2" v-if="isFetching2">Loading...
-        <div aria-hidden="true" class="svg loading"></div>
+        <div aria-hidden="true" class="svg-color loading"></div>
         </p>
         <p class="text-red" v-else-if="data2?.length == 0">No results</p>
         <p class="text-red" v-else-if="err2">{{ err2 }}</p>
@@ -147,8 +147,8 @@ const shareTime = () => {
         </button>
 
         <!-- final results -->
-        <p v-if="isFetching3" class="flex gap2">Calculating...
-        <div aria-hidden="true" class="svg loading"></div>
+        <p v-if="isFetching3" class="flex gap2 font-bold">Calculating...
+        <div aria-hidden="true" class="svg-color loading"></div>
         </p>
         <p v-else-if="data3?.length == 0">No results</p>
         <p v-else-if="err3">{{ err3 }}</p>
