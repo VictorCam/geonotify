@@ -1,0 +1,39 @@
+{
+  "name": "template_v2",
+  "private": true,
+  "version": "0.2.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --host",
+    "up": "taze major -I",
+    "size": "npx vite-bundle-visualizer"
+  },
+  "dependencies": {
+    "@vueuse/core": "^10.11.0",
+    "@vueuse/sound": "^2.0.1",
+    "geolib": "^3.3.4",
+    "js-cookie": "^3.0.5",
+    "normalize.css": "^8.0.1",
+    "reset-css": "^5.0.2",
+    "valibot": "^0.34.0",
+    "vue": "^3.4.30",
+    "vue-i18n": "^9.13.1",
+    "vue-router": "^4.4.0"
+  },
+  "devDependencies": {
+    "@intlify/unplugin-vue-i18n": "^4.0.0",
+    "@unocss/transformer-directives": "^0.61.0",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "autoprefixer": "^10.4.19",
+    "cypress": "^13.12.0",
+    "cypress-vite": "^1.5.0",
+    "unocss": "^0.61.0",
+    "unplugin-vue-components": "^0.27.0",
+    "vite": "^5.3.1",
+    "vite-bundle-visualizer": "^1.2.1",
+    "vite-plugin-pwa": "^0.20.0",
+    "vite-plugin-webfont-dl": "^3.9.4"
+  }
+}

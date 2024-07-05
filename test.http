@@ -1,0 +1,16 @@
+GET https://nominatim.openstreetmap.org/search
+?q=12920 Kuykendahl Rd, 77090, Houston
+&format=json
+###
+
+GET https://nominatim.openstreetmap.org/search
+?q=1300 main st houston tx
+&format=json
+###
+
+GET https://router.project-osrm.org/route/v1/driving/-95.4216613,29.9618332;-95.3673829651985,29.754881
+###
+
+GET https://nominatim.openstreetmap.org/reverse?format=json&lat=30.0409&lon=-95.5302&zoom=18&addressdetails=1
+###
+
